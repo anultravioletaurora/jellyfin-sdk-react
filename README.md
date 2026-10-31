@@ -29,4 +29,4 @@ const result = multiply(3, 7);
 
 ## License
 
-[GPL-3.0](LICENSE)
+[MPL-2.0](LICENSE)

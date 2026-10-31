@@ -65,8 +65,6 @@ To fix formatting errors, run the following:
 npm run lint -- --fix
 ```
 
-
-
 ### Scripts
 
 The `package.json` file contains various scripts for common tasks:
