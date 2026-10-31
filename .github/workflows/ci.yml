@@ -31,6 +31,8 @@ jobs:
       - name: Typecheck files
         run: npm run typecheck
 
+      - name: Run unit tests
+        run: npm test -- --ci
 
   build-library:
     runs-on: ubuntu-latest
@@ -47,7 +49,6 @@ jobs:
 
   build-android:
     runs-on: ubuntu-latest
-
 
     steps:
       - name: Checkout
@@ -66,7 +67,6 @@ jobs:
         run: |
           /bin/bash -c "yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null"
 
-
       - name: Cache Gradle
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
@@ -79,7 +79,7 @@ jobs:
 
       - name: Build example for Android
         env:
-          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx6g"
+          GRADLE_OPTS: '-Dorg.gradle.jvmargs=-Xmx6g'
         run: |
           npm run example build:android
 
@@ -112,4 +112,3 @@ jobs:
       - name: Build example for iOS
         run: |
           npm run example build:ios
-

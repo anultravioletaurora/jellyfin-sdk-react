@@ -1,0 +1,9 @@
+# Native projects (formatted by Xcode / Android Studio)
+android/
+ios/
+example/android/
+example/ios/
+
+# Build output
+lib/
+example/vendor/
